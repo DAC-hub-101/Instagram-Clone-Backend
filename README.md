@@ -1,2 +1,2 @@
 # Instagram-Clone-Backend
-SoftUni Spring Advanced Project
+Portfolio Project
