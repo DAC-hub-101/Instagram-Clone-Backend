@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.technicalinterview.instagramclone.entity.Users;
 import com.technicalinterview.instagramclone.service.UserService;
 
-
 @RestController
 @RequestMapping("/users")
 public class UserController {

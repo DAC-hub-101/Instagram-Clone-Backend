@@ -60,7 +60,7 @@ public class Status {
 	public void setTimeStamp(Timestamp timeStamp) {
 		this.timeStamp = timeStamp;
 	}
-	public String getUsernaName() {
+	public String getUserName() {
 		return userName;
 	}
 	public void setUserName(String userName) {

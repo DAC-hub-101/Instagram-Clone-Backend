@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.technicalinterview.instagramclone.entity.Post;
 import com.technicalinterview.instagramclone.repository.PostRepo;
+import java.util.Collections;
 
 @Service
 public class PostService {
@@ -29,7 +30,7 @@ public class PostService {
 			postItem.setUserName(userService.displayUserMetaData(postItem.getUserId()).getUserName());
 			
 		}
-				
+		Collections.sort(postList, (a, b) -> b.getId() - a.getId());;		
  		return postList;
 	}
 	
