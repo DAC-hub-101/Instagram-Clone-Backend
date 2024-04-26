@@ -4,37 +4,34 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name="Users")
 public class Users {
     
-	@Id
-    @GeneratedValue
-	private int id;
-    
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+  	private String userId;
+
+
     @NotNull
-    private String userId;
     private String userName;
     private String name;
+	private String password;
     private String profileImage;
     
 	public Users() {
 		super();
 	}
 	
-	public Users(int id, String userId, String userName, String name, String profileImage) {
+	public Users(String userId, String userName, String name, String password, String profileImage) {
 		super();
-		this.id = id;
 		this.userId = userId;
 		this.userName = userName;
 		this.name = name;
+		this.password = password;
 		this.profileImage = profileImage;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getUserId() {
 		return userId;
@@ -60,6 +57,11 @@ public class Users {
 	public void setProfileImage(String profileImage) {
 		this.profileImage = profileImage;
 	}
-    
+    public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
     
 }

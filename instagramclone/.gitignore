@@ -1,17 +1,51 @@
 HELP.md
+
+# Environment files
+.env                                   # Environment variables files
+.env.local                             # Local environment variables 
+
+# Operating System specific files
+.DS_Store                              # macOS desktop services store
+Thumbs.db                              # Windows thumbnail cache
+desktop.ini                            # Windows desktop configuration
+.AppleDouble                           # macOS custom attribute files
+.LSOverride                            # macOS file opening settings
+ehthumbs.db                            # Windows extra thumbnail cache
+$RECYCLE.BIN/                          # Windows recycle bin
+
+# Logs and temporary files
+*.log                                  # Log files
+*.tmp                                  # Temporary files
+*.tlog                                 # Visual Studio temporary log files
+*.temp                                 # Other temporary files
+
+# Maven specific
 target/
-!.mvn/wrapper/maven-wrapper.jar
+### The Maven Wrapper is a script that can download and run the correct Maven version for the project, and the maven-wrapper.jar is a part of that.### 
+!.mvn/wrapper/maven-wrapper.jar 
 !**/src/main/**/target/
 !**/src/test/**/target/
+dependency-reduced-pom.xml             # Ignore Maven's dependency-reduced POM
+pom.xml.tag                            # Ignore Maven release tagging files
+pom.xml.releaseBackup                  # Ignore backup POM files created by the Maven release plugin
+pom.xml.versionsBackup                 # Ignore backup POM files created by the Maven Versions plugin
+pom.xml.next                           # Ignore temporary POM files
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
+# Java specific
+*.class                                # Ignore compiled Java class files
+*.jar                                  # Ignore Java archive files
+*.war                                  # Ignore web archive files
+*.ear                                  # Ignore enterprise archive files
+hs_err_pid*                            # Ignore JVM crash logs
+
+
+# IDE - Eclipse/STS
+.classpath                             # Eclipse classpath file
+.project                               # Eclipse project file
+.settings/                             # Eclipse settings files
+.springBeans                           # Spring-specific metadata for Eclipse
 .sts4-cache
+
 bin/
 ### IntelliJ IDEA ###
 .idea
@@ -31,3 +65,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Package Files
+*.zip                                  # Ignore ZIP archive files
+*.tar.gz                               # Ignore Gzip compressed files
+*.rar                                  # Ignore RAR archive files
+
+# Others
+*.swp                                  # Vi/Vim swap files
+*.bak                                  # Backup files
+*.orig                                 # Original files

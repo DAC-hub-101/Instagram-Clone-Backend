@@ -20,17 +20,11 @@ public class Comments {
 	private String comment;
 	private String userName;
 	
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
 	public Comments() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Comments(int id, String commentId, String userId, String postId, Timestamp timeStamp, String comment) {
+	public Comments(int id, String commentId, String userId, String postId, Timestamp timeStamp, String comment, String userName) {
 		super();
 		this.id = id;
 		this.commentId = commentId;
@@ -38,7 +32,16 @@ public class Comments {
 		this.postId = postId;
 		this.timeStamp = timeStamp;
 		this.comment = comment;
+		this.userName = userName;
+
 	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -75,4 +78,5 @@ public class Comments {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
 }

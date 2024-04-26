@@ -14,10 +14,10 @@ public class Status {
     
     private String statusId;
     private String userId;
-    private String path;
     private String userName;
     private Timestamp timeStamp;
     
+	private String imageUrl;  // URL to the image stored locally
 	public Status() {
 		super();
 	}
@@ -27,7 +27,6 @@ public class Status {
 		this.id = id;
 		this.statusId = statusId;
 		this.userId = userId;
-		this.path = path;
 		this.timeStamp = timeStamp;
 	}
 	public int getId() {
@@ -48,17 +47,11 @@ public class Status {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getPath() {
-		return path;
-	}
-	public void setPath(String path) {
-		this.path = path;
-	}
 	public Timestamp getTimeStamp() {
 		return timeStamp;
 	}
-	public void setTimeStamp(Timestamp timeStamp) {
-		this.timeStamp = timeStamp;
+	public void setTimeStamp(Timestamp timestamp2) {
+		this.timeStamp = timestamp2;
 	}
 	public String getUserName() {
 		return userName;
@@ -67,4 +60,11 @@ public class Status {
 		this.userName = userName;
 	}
     
+	public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

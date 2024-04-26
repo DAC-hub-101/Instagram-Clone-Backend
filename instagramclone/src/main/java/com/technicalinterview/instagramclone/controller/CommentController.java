@@ -10,24 +10,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.technicalinterview.instagramclone.entity.Comments;
+import com.technicalinterview.instagramclone.dto.CommentsDTO;
 import com.technicalinterview.instagramclone.service.CommentsService;
 
 @RestController
 @RequestMapping("/comments")
 public class CommentController {
-	
-	@Autowired
-	CommentsService commentsService;
-	
-	@PostMapping("")
-	private Comments submitComment(@RequestBody Comments comment) {
-		return commentsService.submitCommentToDB(comment);
-	}
-	
-	@GetMapping("/{postId}")
-	private ArrayList<Comments> getCommentsForPost(@PathVariable("postId") String postId){
-		return commentsService.getAllCommentsForDB(postId);
-	}
+    
+    @Autowired
+    private CommentsService commentsService;
 
+    @PostMapping("")
+    public CommentsDTO submitComment(@RequestBody CommentsDTO commentDTO) {
+        return commentsService.submitCommentToDB(commentDTO);
+    }
+	
+    @GetMapping("/{postId}")
+    public ArrayList<CommentsDTO> getCommentsForPost(@PathVariable("postId") String postId) {
+        return commentsService.getAllCommentsForDB(postId);
+    }
 }

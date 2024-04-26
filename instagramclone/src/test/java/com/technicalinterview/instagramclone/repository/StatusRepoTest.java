@@ -1,5 +1,5 @@
-package com.technicalinterview.instagramclone.repository;
+// package com.technicalinterview.instagramclone.repository;
 
-public class StatusRepoTest {
+// public class StatusRepoTest {
     
-}
+// }

@@ -16,19 +16,19 @@ public class Post {
 	private String postId;
 	private String userId;
 	private String userName;
-	private String postPath;
+	private String imageUrl;
 	private Timestamp timeStamp;
 	private int likeCount;
 	
 	public Post() {
 		super();
 	}
-	public Post(int id, String postId, String userId, String postPath, Timestamp timeStamp, int likeCount) {
+	public Post(int id, String postId, String userId, String imageUrl, Timestamp timeStamp, int likeCount) {
 		super();
 		Id = id;
 		this.postId = postId;
 		this.userId = userId;
-		this.postPath = postPath;
+		this.imageUrl = imageUrl;
 		this.timeStamp = timeStamp;
 		this.likeCount = likeCount;
 	}
@@ -57,11 +57,11 @@ public class Post {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getPostPath() {
-		return postPath;
+	public String getImageUrl() {
+		return imageUrl;
 	}
-	public void setPostPath(String postPath) {
-		this.postPath = postPath;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 	public Timestamp getTimeStamp() {
 		return timeStamp;

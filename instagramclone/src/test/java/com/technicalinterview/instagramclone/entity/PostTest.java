@@ -1,5 +1,5 @@
-package com.technicalinterview.instagramclone.entity;
+// package com.technicalinterview.instagramclone.entity;
 
-public class PostTest {
+// public class PostTest {
     
-}
+// }
