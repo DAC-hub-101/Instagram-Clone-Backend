@@ -29,6 +29,56 @@ Follow these steps to set up the project locally.
 ## Step 2: Set Up MySQL Database
 Create a MySQL database named instagram_clonedb and grant all privileges to a user specific to this database.
 
+# 📦 MySQL Setup for `instagram_clonedb`
+
+Follow these steps to set up the MySQL database for this project:
+
+## 🔧 Step-by-Step Guide
+
+1. **Log in to MySQL as root:**
+   ```bash
+   mysql -u root -p
+   ```
+
+2. **Create the database:**
+   ```sql
+   CREATE DATABASE instagram_clonedb;
+   ```
+
+3. **Create a new user:**
+   ```sql
+   CREATE USER 'insta_user'@'localhost' IDENTIFIED BY 'secure_password';
+   ```
+   > ⚠️ Replace `insta_user` and `secure_password` with your own values.
+
+4. **Grant all privileges to the user on the new database:**
+   ```sql
+   GRANT ALL PRIVILEGES ON instagram_clonedb.* TO 'insta_user'@'localhost';
+   ```
+
+5. **Apply the changes:**
+   ```sql
+   FLUSH PRIVILEGES;
+   ```
+
+6. **(Optional) Confirm privileges:**
+   ```sql
+   SHOW GRANTS FOR 'insta_user'@'localhost';
+   ```
+
+## 🚀 One-liner Setup (for scripting)
+
+If you'd like to run all steps in one go from the shell:
+
+```bash
+mysql -u root -p -e "CREATE DATABASE instagram_clonedb; CREATE USER 'insta_user'@'localhost' IDENTIFIED BY 'secure_password'; GRANT ALL PRIVILEGES ON instagram_clonedb.* TO 'insta_user'@'localhost'; FLUSH PRIVILEGES;"
+```
+
+## ✅ Security Best Practices
+
+- Use environment variables or secrets management tools to avoid storing raw passwords in scripts
+- Consider using a strong, randomly generated password for database users
+- Limit database user privileges to only what is necessary for your application
 ## Step 3: Configure Application Properties
 Navigate to src/main/resources and update the application.properties file with your specific MySQL user and password:
 
