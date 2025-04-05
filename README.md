@@ -89,19 +89,19 @@ spring.datasource.password=your_db_password
 
 ## Step 4: Build and Run the Application
 From the project directory, run the following command to build the application:
-mvnw clean install
+mvn clean install
 
 Then, start the server by running:
-mvnw spring-boot:run
+mvn spring-boot:run
 
 The server will start on http://localhost:8080
 
 ## Available Scripts 
 In the project directory, you can also run:
 
-- **mvnw test**: Executes the test suite.
-- **mvnw spring-boot:run**: Starts the application.
-- **mvnw clean install**: Build the application.
+- **mvn test**: Executes the test suite.
+- **mvn spring-boot:run**: Starts the application.
+- **mvn clean install**: Build the application.
 
 ## Browser Compatibility
 
